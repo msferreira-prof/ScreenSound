@@ -4,7 +4,9 @@
     public string Artista { get; set; }
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }
-    public string NomeCompleto { get; set; }
+
+    // usando lambda para casos de propriedade get apenas
+    public string DescricaoResumida => $"A música {Nome} pertence à banda {Artista}";
 
     public void ExibirFichaTecnica()
     {
@@ -15,8 +17,10 @@
             Console.WriteLine($"Disponível no plano.");
         } else
         {
-            Console.Write("Adquira o plano Plus+");
+            Console.WriteLine("Adquira o plano Plus+");
         }
+
+        Console.WriteLine($"Descrição Resumida: {DescricaoResumida}");
     }
 
     public void ExibirNomeEArtista()
