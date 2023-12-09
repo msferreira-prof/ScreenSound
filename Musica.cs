@@ -1,9 +1,10 @@
 ﻿public class Musica
 {
-    public string Nome;
-    public string Artista;
+    public string Nome { get; set; }
+    public string Artista { get; set; }
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }
+    public string NomeCompleto { get; set; }
 
     public void ExibirFichaTecnica()
     {
