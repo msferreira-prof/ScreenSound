@@ -10,7 +10,6 @@
 		Console.WriteLine($"Numero: {numero}");
 		Console.WriteLine($"Titula: {titular}");
 		Console.WriteLine($"Saldo: {saldo}");
-
 	}
 
 }
