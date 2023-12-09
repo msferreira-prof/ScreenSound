@@ -3,6 +3,8 @@
     private double preco;
     private int estoque;
 
+    private int resultado, a, b;
+
     public string Nome { get; set; }
     public string Marca { get; set; }
     public double Preco
@@ -36,6 +38,9 @@
     }
 
     public string DescricaoProduto => $"{this.Nome} {this.Marca} - {this.Preco}";
+
+    // somar dois numeros utilizando funcoes Lambda
+    public int Somar(int a, int b) => a + b;
 }
 
 
