@@ -1,18 +1,27 @@
 ﻿public class Musica
 {
-    public string Nome { get; set; }
-    public string Artista { get; set; }
+
+    public string Nome { get; }
+    public Banda Artista { get; set; }
     public int Duracao { get; set; }
     public bool Disponivel { get; set; }
+    public Genero Genero { get; set; }
+
+    public Musica(Banda artista, string nome)
+    {
+        Artista = artista;
+        Nome = nome;
+    }
 
     // usando lambda para casos de propriedade get apenas
     public string DescricaoResumida => $"A música {Nome} pertence à banda {Artista}";
 
     public void ExibirFichaTecnica()
     {
-        Console.WriteLine($"Nome da música: {Nome}");
-        Console.WriteLine($"Artista: {Artista}");
+        Console.WriteLine($"\nNome da música: {Nome}");
+        Console.WriteLine($"Artista: {Artista.Nome}");
         Console.WriteLine($"Nome da música: {Duracao}");
+        Console.WriteLine($"Gênero musical: {Genero.Nome}");
         if (Disponivel) {
             Console.WriteLine($"Disponível no plano.");
         } else
@@ -25,7 +34,7 @@
 
     public void ExibirNomeEArtista()
     {
-        Console.WriteLine($"Nome/Artista: {Nome} - {Artista}");
+        Console.WriteLine($"Nome/Artista: {Nome} - {Artista.Nome}");
     }
 }
     
